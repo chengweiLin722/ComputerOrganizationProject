@@ -1,0 +1,11 @@
+modify
+gem5/configs/common/caches.py
+
+if you update the gem5 file, you should do this code first:
+	scons EXTRAS=../NVmain build/X86/gem5.opt
+or you can run the test with this code:
+./build/X86/gem5.opt configs/example/se.py -c multiply --cpu-type=TimingSimpleCPU --caches --l1i_size=32kB --l1d_size=32kB --l2cache --l2_size=128kB --l3cache --l3_size=1MB --l1i_assoc=4 --l1d_assoc=4 --l2_assoc=4 --l3_assoc=4 --maxinsts=180000000  --mem-type=NVMainMemory --nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config
+
+
+#All caches are 4-way associativity
+#maxinsts for avoiding too long wait time

@@ -1,0 +1,13 @@
+modify
+	gem5/configs/common/Caches.py
+	gem5/configs/common/Options.py
+	gem5/src/cpu/BaseCPU.py
+	gem5/src/mem/XBar.py
+	gem5/configs/common/CacheConfig.py
+recompile
+	scons EXTRAS=../NVmain build/X86/gem5.opt
+run hello world
+	./build/X86/gem5.opt configs/example/se.py \
+-c tests/test-progs/hello/bin/x86/linux/hello \
+--cpu-type=TimingSimpleCPU --caches --l2cache --l3cache --mem-type=NVMainMemory \
+--nvmain-config=../NVmain/Config/PCM_ISSCC_2012_4GB.config
