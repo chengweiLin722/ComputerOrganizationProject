@@ -1,16 +1,17 @@
 gem5/m5out/stats.txt
 
 
+
 ---------- Begin Simulation Statistics ----------
 sim_seconds                                  1.946174                       # Number of seconds simulated
 sim_ticks                                1946173504000                       # Number of ticks simulated
 final_tick                               1946173504000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 sim_freq                                 1000000000000                       # Frequency of simulated ticks
-host_inst_rate                                 816375                       # Simulator instruction rate (inst/s)
-host_op_rate                                  1307690                       # Simulator op (including micro ops) rate (op/s)
-host_tick_rate                             1705314775                       # Simulator tick rate (ticks/s)
-host_mem_usage                                 665064                       # Number of bytes of host memory used
-host_seconds                                  1141.24                       # Real time elapsed on the host
+host_inst_rate                                 831793                       # Simulator instruction rate (inst/s)
+host_op_rate                                  1332386                       # Simulator op (including micro ops) rate (op/s)
+host_tick_rate                             1737520082                       # Simulator tick rate (ticks/s)
+host_mem_usage                                 665068                       # Number of bytes of host memory used
+host_seconds                                  1120.09                       # Real time elapsed on the host
 sim_insts                                   931679913                       # Number of instructions simulated
 sim_ops                                    1492387768                       # Number of ops (including micro ops) simulated
 system.voltage_domain.voltage                       1                       # Voltage in Volts

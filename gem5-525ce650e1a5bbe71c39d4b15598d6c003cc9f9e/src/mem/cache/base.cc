@@ -1070,6 +1070,12 @@ BaseCache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
         satisfyRequest(pkt, blk);
         maintainClusivity(pkt->fromCache(), blk);
 
+        //Q5 remove annotation
+        //if (blk->isWritable()) {
+        //    PacketPtr writecleanPkt = writecleanBlk(blk, pkt->req->getDest(), pkt->id);
+        //    writebacks.push_back(writecleanPkt);
+        //}
+
         return true;
     }
 

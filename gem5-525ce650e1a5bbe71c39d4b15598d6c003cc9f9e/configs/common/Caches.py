@@ -54,19 +54,13 @@ class L1Cache(Cache):
     response_latency = 2
     mshrs = 4
     tgts_per_mshr = 20
-    #Q5 annotate -> Write Back
-    writeback_clean = False
 class L1_ICache(L1Cache):
     is_read_only = True
     # Writeback clean lines as well
-    #Q5 change to False
-    writeback_clean = False
-
+    writeback_clean = True
 class L1_DCache(L1Cache):
-    #Q5 annotate -> Write Back
-    writeback_clean = False
     pass
-
+ 
 class L2Cache(Cache):
     assoc = 8
     tag_latency = 20
@@ -75,8 +69,6 @@ class L2Cache(Cache):
     mshrs = 20
     tgts_per_mshr = 12
     write_buffers = 8
-    #Q5 annotate -> Write Back
-    writeback_clean = False
 class L3Cache(Cache):
     assoc = 8
     tag_latency = 20
@@ -87,8 +79,6 @@ class L3Cache(Cache):
     write_buffers = 8
     #Q4 remove the annotation
     #replacement_policy = Param.BaseReplacementPolicy(LFURP(),"Replacement policy")
-    #Q5 annotate -> Write Back
-    writeback_clean = False
 class IOCache(Cache):
     assoc = 8
     tag_latency = 50
